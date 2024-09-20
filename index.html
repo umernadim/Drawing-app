@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing app</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            overflow: hidden;
+            color: white;
+
+        }
+        #container{
+            height: 100vh;
+            display: flex;
+        }
+        h2{
+            background-color: #7f7fd5;
+            background: linear-gradient(to right, #91EAE4, #86a837, #7f7fd5);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #toolBar{
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            width: 70px;
+            background-color: #202020;
+        }
+        #toolBar *{
+            margin-bottom: 8px;
+        }
+        #toolBar input{
+            width: 90%;
+        }
+        #toolBar label{
+            font-size: 13px;
+        }
+        #toolBar button{
+            background-color: #2c80e6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="container">
+        <div id="toolBar">
+            <h2>Tools</h2>
+            <label for="color">Stroke</label>
+            <input type="color" name="strokeColor" id="color">
+            <label for="lineWidth">line width</label>
+            <input type="number" name="lineWidth" id="lineWidth" value="3">
+            <button id="clearBtn">Clear</button>
+        </div>
+
+        <div id="drawingBoard">
+            <canvas id="canvas" ></canvas>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
